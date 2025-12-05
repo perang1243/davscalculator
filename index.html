@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>A thing I made when I was supposed to be doing my work lol (aka a calculator)</title>
+</head>
+
+<body>
+	<div id="output"></div>
+	<br>
+	<div id="keys">
+		<button id="btn1" onclick="button1()">1</button>
+		<button id="btn2" onclick="button2()">2</button>
+		<button id="btn3" onclick="button3()">3</button>
+		<button id="btn4" onclick="button4()">4</button>
+		<button id="btn5" onclick="button5()">5</button>
+		<button id="btn6" onclick="button6()">6</button>
+		<button id="btn7" onclick="button7()">7</button>
+		<button id="btn8" onclick="button8()">8</button>
+		<button id="btn9" onclick="button9()">9</button>
+		<button id="btn0" onclick="button0()">0</button>
+		<button id="btnC" onclick="buttonC()">.</button>
+		<button id="btnP" onclick="buttonP()">+</button>
+		<button id="btnM" onclick="buttonM()">-</button>
+		<button id="btnT" onclick="buttonT()">*</button>
+		<button id="btnD" onclick="buttonD()">/</button>
+		<button id="btnE" onclick="buttonE()">=</button>
+		<button id="btnCLR" onclick="buttonCLR()">CLR</button>
+	</div>
+</body>
+
+<script>
+	function button1() {
+		document.getElementById("output").innerHTML += "1";
+	}
+	function button2() {
+		document.getElementById("output").innerHTML += "2";
+	}
+	function button3() {
+		document.getElementById("output").innerHTML += "3";
+	}
+	function button4() {
+		document.getElementById("output").innerHTML += "4";
+	}
+	function button5() {
+		document.getElementById("output").innerHTML += "5";
+	}
+	function button6() {
+		document.getElementById("output").innerHTML += "6";
+	}
+	function button7() {
+		document.getElementById("output").innerHTML += "7";
+	}
+	function button8() {
+		document.getElementById("output").innerHTML += "8";
+	}
+	function button9() {
+		document.getElementById("output").innerHTML += "9";
+	}
+	function button0() {
+		document.getElementById("output").innerHTML += "0";
+	}
+	function buttonC() {
+		document.getElementById("output").innerHTML += ".";
+	}
+	function buttonP() {
+		document.getElementById("output").innerHTML += "+";
+	}
+	function buttonM() {
+		document.getElementById("output").innerHTML += "-";
+	}
+	function buttonT() {
+		document.getElementById("output").innerHTML += "*";
+	}
+	function buttonD() {
+		document.getElementById("output").innerHTML += "/";
+	}
+	function buttonCLR() {
+		document.getElementById("output").innerHTML = "";
+	}
+	function buttonE() {
+		const outputText = document.getElementById("output").textContent;
+		const numString = eval(outputText);
+		document.getElementById("output").innerHTML = numString;
+	}
+</script>
+
+<style>
+	@font-face {
+  		font-family: digital; /* set name */
+  		src: url(digital-7.ttf); /* url of the font */
+	}
+	body {
+		background-color: lightgray;
+	}
+	button {
+		width: 67px;
+		height: 67px;
+		font-size: 40px;
+		font-family: digital;
+		background-color: lightblue;
+	}
+	#output {
+		font-size: 67px;
+		font-family: digital;
+		height: 67px;
+		border-style: solid;
+		border-width: 6.7px;
+	}
+</style>
